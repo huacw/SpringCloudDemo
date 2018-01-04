@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpingCloudZuul/SpingCloudZuul.iml" filepath="$PROJECT_DIR$/SpingCloudZuul/SpingCloudZuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudClient/SpringCloudClient.iml" filepath="$PROJECT_DIR$/SpringCloudClient/SpringCloudClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudDemo.iml" filepath="$PROJECT_DIR$/SpringCloudDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudFeign/SpringCloudFeign.iml" filepath="$PROJECT_DIR$/SpringCloudFeign/SpringCloudFeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudHystrix/SpringCloudHystrix.iml" filepath="$PROJECT_DIR$/SpringCloudHystrix/SpringCloudHystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudRibbon/SpringCloudRibbon.iml" filepath="$PROJECT_DIR$/SpringCloudRibbon/SpringCloudRibbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudServer/SpringCloudServer.iml" filepath="$PROJECT_DIR$/SpringCloudServer/SpringCloudServer.iml" />
+    </modules>
+  </component>
+</project>
