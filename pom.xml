@@ -16,6 +16,18 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>SpringCloudClient</module>
+        <module>SpringCloudConfigClient</module>
+        <module>SpringCloudConfigRegCenter</module>
+        <module>SpringCloudConfigServer</module>
+        <module>SpringCloudFeign</module>
+        <module>SpringCloudHystrix</module>
+        <module>SpringCloudRibbon</module>
+        <module>SpringCloudServer</module>
+        <module>SpringCloudZuul</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
