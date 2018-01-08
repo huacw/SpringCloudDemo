@@ -31,6 +31,8 @@
         <module>SpringCloudZipKinServer</module>
         <module>SpringCloudZipkinClinet1</module>
         <module>SpringCloudZipkinClinet2</module>
+        <module>SpringCloudTurbine</module>
+        <module>SpringCloudHystrix1</module>
     </modules>
 
     <properties>

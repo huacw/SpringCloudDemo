@@ -1,9 +1,5 @@
 server:
-  port: 8762
-
-spring:
-  profiles:
-    active: pee2
+  port: 8761
 
 eureka:
   instance:
@@ -12,4 +8,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer2:8762/eureka/
+spring:
+  application:
+    name: reg-center

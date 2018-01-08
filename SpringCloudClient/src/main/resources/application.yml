@@ -2,6 +2,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+#高可用注册中心
+#      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
 server:
   port: 8763
 spring:
