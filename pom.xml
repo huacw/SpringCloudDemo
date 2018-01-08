@@ -26,6 +26,8 @@
         <module>SpringCloudRibbon</module>
         <module>SpringCloudServer</module>
         <module>SpringCloudZuul</module>
+        <module>SpringCloudKafkaBusClient</module>
+        <module>SpringCloudKafkaBusServer</module>
     </modules>
 
     <properties>
