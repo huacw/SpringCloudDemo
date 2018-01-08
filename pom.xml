@@ -28,6 +28,9 @@
         <module>SpringCloudZuul</module>
         <module>SpringCloudKafkaBusClient</module>
         <module>SpringCloudKafkaBusServer</module>
+        <module>SpringCloudZipKinServer</module>
+        <module>SpringCloudZipkinClinet1</module>
+        <module>SpringCloudZipkinClinet2</module>
     </modules>
 
     <properties>
