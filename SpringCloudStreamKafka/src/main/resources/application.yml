@@ -1,0 +1,87 @@
+spring:
+  cloud:
+    stream:
+      #指定用kafka stream来作为默认消息中间件
+#      default-binder: kafka1
+#      kafka:
+#        #来自KafkaBinderConfigurationProperties
+#        binder:
+#          brokers: name87:9094
+#          zkNodes: name85:2181,name86:2181,name87:2181/kafka0101
+#          #如果需要传递自定义header信息，需要在此处声明，不然自定义消息头是不会出现在最终消息当中的
+##          headers: myType
+#          configuration:
+#            auto:
+#              offset:
+#                #可以设置原生kafka属性，比如设置新的消费组从最新的offset开始消费
+#                reset: latest
+      #属性来自BindingProperties
+      bindings:
+        #与@StreamListener注解中的value一致，是绑定的渠道名
+        testa:
+          binder: kafka1
+          consumer:
+            headerMode: raw
+          producer:
+            headerMode: raw
+          #绑定的kafka topic名称为test
+          destination: cloud-test10
+          #消费组
+#          group: cloud-test2-group1
+#          content-type: application/json
+#        input_2:
+#          binder: kafka2
+#          consumer:
+#            headerMode: raw
+#          producer:
+#            headerMode: raw
+#         #绑定的kafka topic名称为test
+#          destination: cloud-test10
+           #消费组
+        # group: cloud-test2-group1
+#          content-type: application/json
+        sourceA:
+          binder: kafka1
+          consumer:
+            headerMode: raw
+          producer:
+            headerMode: raw
+          destination: cloud-test10
+#          content-type: application/json
+#        output_2:
+#          binder: kafka2
+#          consumer:
+#            headerMode: raw
+#          producer:
+#            headerMode: raw
+#          destination: cloud-test10
+      binders:
+        kafka1:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: 192.168.118.100:9092,192.168.118.200:9092,192.168.118.201:9092
+                      zk-nodes: 192.168.118.100:2181,192.168.118.200:2181,192.168.118.201:2181
+                      configuration:
+                        auto:
+                          offset:
+                            #可以设置原生kafka属性，比如设置新的消费组从最新的offset开始消费
+                            reset: latest
+#        kafka2:
+#          type: kafka
+#          environment:
+#            spring:
+#              cloud:
+#                stream:
+#                  kafka:
+#                    binder:
+#                      brokers: name85:9094
+#                      zkNodes: name85:2181,name86:2181,name87:2181/kafkatest0101
+  application:
+    name: kafka-demo
+server:
+  port: 8888

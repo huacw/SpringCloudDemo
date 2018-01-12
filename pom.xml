@@ -33,6 +33,7 @@
         <module>SpringCloudZipkinClinet2</module>
         <module>SpringCloudTurbine</module>
         <module>SpringCloudHystrix1</module>
+        <module>SpringCloudStreamKafka</module>
     </modules>
 
     <properties>

@@ -7,3 +7,7 @@ server:
 spring:
   application:
     name: service-ribbon
+#为指定服务设置ribbon配置
+service-hi:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
