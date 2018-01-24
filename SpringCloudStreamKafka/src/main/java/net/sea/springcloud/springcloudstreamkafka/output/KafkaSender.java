@@ -1,11 +1,9 @@
 package net.sea.springcloud.springcloudstreamkafka.output;
 
 import org.apache.log4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.stereotype.Component;
 
 @EnableBinding(Source.class)
 public class KafkaSender {
