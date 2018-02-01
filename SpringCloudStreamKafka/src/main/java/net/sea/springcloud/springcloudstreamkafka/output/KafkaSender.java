@@ -15,7 +15,7 @@ public class KafkaSender {
     public void sendMessage(String message) {
         try {
             logger.info("发送的消息为：" + message);
-            source.output1().send(MessageBuilder.withPayload("message:" + message).build());
+            source.output1().send(MessageBuilder.withPayload(message).build());
         } catch (Exception e) {
             e.printStackTrace();
             logger.info("消息发送失败，原因：" + e);

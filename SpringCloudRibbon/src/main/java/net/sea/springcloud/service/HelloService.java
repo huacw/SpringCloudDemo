@@ -12,7 +12,13 @@ public class HelloService {
     @Autowired
     RestTemplate restTemplate;
 
-    public String hiService(String name){
-        return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
+    public String hiService(String name) {
+//        Map<String,Object> params = new HashMap<>();
+//        params.put("name",name);
+//        String response = restTemplate.getForObject("http://SERVICE-HI/hi?name={name}", String.class, params);
+//        System.out.println(response);
+//        System.out.println(restTemplate.postForObject("http://SERVICE-HI/hi?name={name}",null,String.class,name));
+        return restTemplate.getForEntity("http://SERVICE-HI/hi?name={name}", String.class, name).getBody();
+//        return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
     }
 }

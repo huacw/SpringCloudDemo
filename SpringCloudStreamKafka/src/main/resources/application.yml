@@ -18,14 +18,16 @@ spring:
       #属性来自BindingProperties
       bindings:
         #与@StreamListener注解中的value一致，是绑定的渠道名
-        testa:
-          binder: kafka1
-          consumer:
-            headerMode: raw
-          producer:
-            headerMode: raw
-          #绑定的kafka topic名称为test
-          destination: cloud-test10
+#        testa:
+#          binder: kafka1
+#          consumer:
+#            headerMode: raw
+#          producer:
+#            headerMode: raw
+#          #绑定的kafka topic名称为test
+#          destination: cloud-test10
+#          #设置内容格式
+#          content-type: text/plain
           #消费组
 #          group: cloud-test2-group1
 #          content-type: application/json
@@ -47,6 +49,8 @@ spring:
           producer:
             headerMode: raw
           destination: cloud-test10
+          #设置内容格式
+          content-type: text/plain
 #          content-type: application/json
 #        output_2:
 #          binder: kafka2
