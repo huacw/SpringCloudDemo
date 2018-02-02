@@ -2,9 +2,9 @@
 #server:
 #  port: 7762
 #
-#spring:
-#  profiles:
-#    active: pee2
+spring:
+  profiles:
+    active: s3
 #
 #eureka:
 #  instance:

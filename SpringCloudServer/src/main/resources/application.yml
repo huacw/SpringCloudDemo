@@ -1,21 +1,70 @@
-server:
-  port: 8761
+#server:
+#  port: 8761
+#
+##spring:
+##  profiles:
+##    active: pee1
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#    instance-enabled-onit: true
+#    lease-expiration-duration-in-seconds: 90
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  #关闭自保护，剔除无效节点
+#  server:
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 60000
 
-#spring:
-#  profiles:
-#    active: pee1
+server:
+  port: 9761
 
 eureka:
   instance:
     hostname: localhost
-    instance-enabled-onit: true
-    lease-expiration-duration-in-seconds: 90
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  #关闭自保护，剔除无效节点
-  server:
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 60000
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+spring:
+  application:
+    name: reg-center
+  profiles: s1
+---
+server:
+  port: 9762
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+spring:
+  application:
+    name: reg-center
+  profiles: s2
+---
+server:
+  port: 9763
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+spring:
+  application:
+    name: reg-center
+  profiles: s3
+
