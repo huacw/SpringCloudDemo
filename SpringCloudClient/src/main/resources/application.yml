@@ -4,6 +4,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     status-page-url: http://localhost:${server.port}/swagger-ui.html
+
 #高可用注册中心
 #      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
 server:
@@ -11,3 +12,9 @@ server:
 spring:
   application:
     name: service-hi
+
+#spring boot关闭服务配置
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false

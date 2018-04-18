@@ -18,12 +18,12 @@ public class SpringCloudconfigClientApplication {
 
     @Value("${key}")
     String key;
-    @Value("${db.pwd}")
-    String password;
+//    @Value("${db.pwd}")
+//    String password;
 
     @RequestMapping(value = "/hi")
     public String hi() {
-        System.out.println("password:"+password);
+//        System.out.println("password:"+password);
         return key;
     }
 

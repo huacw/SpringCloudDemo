@@ -1,5 +1,6 @@
 package net.sea.springcloud.controller;
 
+import feign.Feign;
 import net.sea.springcloud.service.SchedualServiceHi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

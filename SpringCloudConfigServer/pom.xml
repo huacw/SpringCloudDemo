@@ -47,6 +47,18 @@
 			<artifactId>jedis</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.45</version>
+		</dependency>
+
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+
 		<!--高可用配置中心依赖-->
 		<!--<dependency>
 			<groupId>org.springframework.cloud</groupId>
