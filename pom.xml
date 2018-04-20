@@ -34,6 +34,7 @@
         <module>SpringCloudTurbine</module>
         <module>SpringCloudHystrix1</module>
         <module>SpringCloudStreamKafka</module>
+        <module>SpringCloudCommon</module>
     </modules>
 
     <properties>

@@ -41,6 +41,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.sea.springcloud</groupId>
+			<artifactId>net.sea.springcloud.common</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 </project>

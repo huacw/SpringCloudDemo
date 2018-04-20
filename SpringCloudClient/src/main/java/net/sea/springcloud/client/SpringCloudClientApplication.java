@@ -3,15 +3,19 @@ package net.sea.springcloud.client;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import net.sea.springcloud.model.Goods;
+import net.sea.springcloud.model.Order;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.List;
 
 
 @SpringBootApplication
@@ -34,4 +38,24 @@ public class SpringCloudClientApplication {
         return "hi " + name + ",i am from port:" + port;
     }
 
+    @RequestMapping(value = "/getOrder", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public Order getOrder(){
+        Order order = new Order();
+        order.setOrderId(1);
+        order.setProductName("商品1");
+        order.setCreateTime(LocalDateTime.now());
+        Goods goods = new Goods();
+        goods.setName("卖品1");
+        goods.setPrice(BigDecimal.valueOf(50));
+        goods.setExpireDate(LocalDateTime.now().plusDays(180));
+        order.setGoods(Arrays.asList(goods));
+        return order;
+    }
+
+    @RequestMapping(value = "/getOrders", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public List<Order> getOrders(){
+        return Arrays.asList(getOrder());
+    }
 }

@@ -1,5 +1,6 @@
 package net.sea.springcloud.controller;
 
+import com.netflix.loadbalancer.WeightedResponseTimeRule;
 import net.sea.springcloud.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

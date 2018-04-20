@@ -60,10 +60,10 @@
 		</dependency>
 
 		<!--高可用配置中心依赖-->
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>-->
+		</dependency>
 		<!--安全配置-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
