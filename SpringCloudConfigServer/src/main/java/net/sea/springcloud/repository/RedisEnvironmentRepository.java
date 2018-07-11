@@ -212,8 +212,15 @@ public class RedisEnvironmentRepository implements EnvironmentRepository, Ordere
         Map<String, String> config = queryConfig(application, profiles, label);
         config.forEach((key, val) -> {
             String redisKey = application + "_" + profiles + "_" + label;
-            master.hset(redisKey, key, val);
-            master.expire(redisKey, 24 * 60 * 60);//配置一天有效
+            //监控redis的key
+            master.watch(redisKey);
+            Transaction multi = master.multi();
+            multi.hset(redisKey, key, val);
+            //配置一天有效
+            multi.expire(redisKey, 24 * 60 * 60);
+            multi.exec();
+            //取消监控
+            master.unwatch();
         });
         return config;
     }
