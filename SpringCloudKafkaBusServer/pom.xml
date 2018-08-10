@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>net.sea.springcloud</groupId>
 		<artifactId>SpringCloudDemoParent</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<groupId>net.sea.springcloud</groupId>
-	<artifactId>kafkabusserver</artifactId>
+	<artifactId>net.sea.springcloud.kafka.bus.server</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 

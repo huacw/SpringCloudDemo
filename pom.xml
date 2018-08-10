@@ -13,7 +13,7 @@
 
     <groupId>net.sea.springcloud</groupId>
     <artifactId>SpringCloudDemoParent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -35,6 +35,7 @@
         <module>SpringCloudHystrix1</module>
         <module>SpringCloudStreamKafka</module>
         <module>SpringCloudCommon</module>
+        <module>SpringCloudTask</module>
     </modules>
 
     <properties>
