@@ -1,0 +1,22 @@
+#DB Configuration
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/configdb
+    username: root
+    password: root
+  #JPA Configuration:
+  jpa:
+    database: MySQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  application:
+    name: springcloud-task
+
+
+
