@@ -1,4 +1,4 @@
-package net.sea.springcloud.net.sea.springcloud.filter;
+package net.sea.springcloud.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
