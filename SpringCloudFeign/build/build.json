@@ -1,0 +1,8 @@
+{
+  "productVersion": "${project.version}",
+  "scmRevision": "${buildNumber}",
+  "scmBranch": "${scmBranch}",
+  "buildAt": "${timestamp}",
+  "buildBy": "${user.name}",
+  "buildOn": "${env.HOSTNAME}/${env.COMPUTERNAME}"
+}
